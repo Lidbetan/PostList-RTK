@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectAllUsers } from "../../features";
+import PropTypes from "prop-types"
 
 const PostAuthor = ({userId}) => {
     const users = useSelector(selectAllUsers);
@@ -11,6 +12,13 @@ const PostAuthor = ({userId}) => {
         <span>by {author ? author.name : "Unknown author"}</span>
     </>
   )
+}
+
+PostAuthor.propTypes = {
+  userId: PropTypes.oneOfType([
+    PropTypes.string,
+    // PropTypes.number
+  ])
 }
 
 export default PostAuthor

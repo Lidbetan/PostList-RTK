@@ -49,25 +49,24 @@ export const postsSlice = createSlice({
                         date: new Date().toISOString(),
                         userId,
                         reactions: {
-                          thumbsUp: 0,
-                          wow: 0,
-                          hearth: 0,
-                          rocket: 0,
-                          coffee: 0,
-                      }
+                            thumbsUp: 0,
+                            wow: 0,
+                            hearth: 0,
+                            rocket: 0,
+                            coffee: 0,
+                        },
                     },
                 };
             },
         },
-      reactionAdded(state, action) {
-        const {postId, reaction} = action.payload
-        const existingPost = state.find(post => post.id === postId)
+        reactionAdded(state, action) {
+            const { postId, reaction } = action.payload;
+            const existingPost = state.find((post) => post.id === postId);
 
-        if(existingPost) {
-          existingPost.reactions[reaction]++
-        }
-      }
-
+            if (existingPost) {
+                existingPost.reactions[reaction]++;
+            }
+        },
     },
 });
 //De esta forma si cambia el initial state, me evito tener que modificarlo en todos los componentes, solo lo modifico acá

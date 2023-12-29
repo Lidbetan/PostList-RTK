@@ -1,4 +1,5 @@
 import { parseISO, formatDistanceToNow } from "date-fns"
+import PropTypes from "prop-types"
 
 const TimeAgo = ({timestamp}) => {
   let timeAgo = "";
@@ -14,6 +15,10 @@ const TimeAgo = ({timestamp}) => {
         </span>
     </>
   )
+}
+
+TimeAgo.propTypes = {
+  timestamp: PropTypes.string
 }
 
 export default TimeAgo

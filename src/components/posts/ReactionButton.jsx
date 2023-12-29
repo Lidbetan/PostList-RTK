@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { reactionAdded } from "../../features";
-
+import PropTypes from "prop-types"
 
 const reactionEmoji = {
     thumbsUp: "👍",
@@ -29,5 +29,9 @@ const ReactionButton = ({ post }) => {
     });
     return <div>{reactionButtons}</div>
 };
+
+ReactionButton.propTypes = {
+    post: PropTypes.object
+}
 
 export default ReactionButton;
