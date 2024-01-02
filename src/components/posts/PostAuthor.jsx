@@ -17,7 +17,7 @@ const PostAuthor = ({userId}) => {
 PostAuthor.propTypes = {
   userId: PropTypes.oneOfType([
     PropTypes.string,
-    // PropTypes.number
+    PropTypes.number
   ])
 }
 
