@@ -9,7 +9,7 @@ const PostAuthor = ({userId}) => {
    
   return (
     <>
-        <span>by {author ? author.name : "Unknown author"}</span>
+        <span>by <span className="font-semibold">{author ? author.name : "Unknown author"}</span></span>
     </>
   )
 }

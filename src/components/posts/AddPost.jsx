@@ -29,7 +29,13 @@ const AddPost = () => {
 
     return (
         <>
-            <PostForm title={title} content={content} userId={userId} fieldChanges={fieldChanges} onSavePostClicked={onSavePostClicked} canSave= {canSave}/>
+            <PostForm 
+                title={title} 
+                content={content} 
+                userId={userId} 
+                fieldChanges={fieldChanges} 
+                onSavePostClicked={onSavePostClicked} 
+                canSave= {canSave}/>
         </>
     );
 };
