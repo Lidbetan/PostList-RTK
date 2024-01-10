@@ -5,6 +5,7 @@ function App() {
     return (
         <>
             <div className="container m-auto">
+                <h1 className="uppercase font-bold text-center my-9 text-lg md:text-xl lg:text-2xl">REDUX TOOLKIT PRACTICE</h1>
                 <PostList />
                 <AddPost />
             </div>

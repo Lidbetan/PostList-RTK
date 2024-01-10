@@ -13,14 +13,14 @@ const PostForm = ({
     console.log(title);
     return (
         <section className="mt-8">
-            <h2 className="font-bold uppercase text-center">Add a New Post</h2>
-            <div className="flex flex-col justify-center items-center gap-6 w-11/12 mx-auto my-4">
+            <h2 className="font-bold uppercase text-center md:text-lg lg:text-xl">Add a New Post</h2>
+            <div className="w-11/12 mx-auto my-4">
                 <form
-                    className="flex flex-col justify-center items-center w-11/12 mx-auto ">
+                    className="flex flex-col lg:grid grid-cols-[85px_200px_100px]  justify-center items-start w-11/12 mx-auto ">
                     {/*Título del post*/}
                     <label className="font-semibold" htmlFor="postTitle">Post Title: </label>
                     <input
-                        className="border-2 rounded border-indigo-400 mb-4"
+                        className="w-full col-span-2 border-2 rounded border-indigo-400 mb-4"
                         type="text"
                         id="postTitle"
                         name="postTitle"
@@ -30,7 +30,7 @@ const PostForm = ({
                     {/*Autor del post*/}
                     <label className="font-semibold" htmlFor="Author">Author: </label>
                     <select
-                        className="border-2  rounded border-indigo-500 mb-4"
+                        className="w-full col-span-2 border-2 rounded border-indigo-500 mb-4"
                         type="text"
                         id="Author"
                         name="Author"
@@ -40,9 +40,9 @@ const PostForm = ({
                         <UsersList />
                     </select>
                     {/*Contenido del post*/}
-                    <label htmlFor="postContent">Content: </label>
+                    <label className="font-semibold" htmlFor="postContent">Content: </label>
                     <textarea
-                        className="border-2 rounded border-indigo-500 mb-4"
+                        className="col-span-2 border-2 rounded border-indigo-500 mb-4 w-full h-24"
                         type="text"
                         id="postContent"
                         name="postContent"
@@ -50,7 +50,7 @@ const PostForm = ({
                         onChange={onContentChanged()}
                     />
                     <button
-                        className={!canSave ? "bg-red-200 p-2 rounded-md uppercase font-semibold " : "bg-green-100 p-2 rounded-md uppercase font-semibold"} 
+                        className={!canSave ? "bg-red-200 p-2 rounded-md uppercase font-semibold w-full col-start-2 " : "bg-green-100 p-2 rounded-md uppercase font-semibold w-full col-start-2"} 
                         onClick={onSavePostClicked}
                         type="button"
                         disabled={!canSave}
