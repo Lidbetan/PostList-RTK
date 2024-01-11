@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: ["./src/**/*.{html,js,jsx}","./index.html"],
   theme: {
     extend: {
-      gridTemplateColumns: {
-
+      fontFamily: {
+        'serif':['"Merriweather"'],
+        'customFont': ['Montserrat', "sans-serif"],
       }
     },
   },

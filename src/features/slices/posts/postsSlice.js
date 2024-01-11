@@ -5,8 +5,8 @@ import { sub } from "date-fns";
 const initialState = [
     {
         id: "1",
-        title: "Learning Redux toolkit",
-        content: "I've heard good things.",
+        title: "Post #1 ",
+        content: "Non voluptate laborum culpa ad reprehenderit. Est commodo tempor velit ea aliquip fugiat adipisicing sint incididunt laboris. Pariatur laborum qui anim sint ullamco culpa ea exercitation cillum.",
         date: sub(new Date(), { minutes: 10 }).toISOString(),
         reactions: {
             thumbsUp: 0,
@@ -18,8 +18,8 @@ const initialState = [
     },
     {
         id: "2",
-        title: "Slices...",
-        content: "The more i say slice, the more i want pizza.",
+        title: "Post #2",
+        content: "Nulla anim sint cupidatat id esse duis consequat ut fugiat id. Fugiat occaecat laboris consectetur incididunt. Excepteur pariatur tempor nostrud ad. Aliqua eiusmod non labore adipisicing aliqua adipisicing enim duis velit cillum dolor cupidatat pariatur sint. Eiusmod consequat dolor cillum aliqua aliquip sint excepteur ipsum sunt laboris in exercitation. Ex adipisicing ea commodo aliqua. Occaecat velit anim reprehenderit enim eu consequat commodo aliquip esse labore eiusmod nulla quis ad.",
         date: sub(new Date(), { minutes: 5 }).toISOString(),
         reactions: {
             thumbsUp: 0,

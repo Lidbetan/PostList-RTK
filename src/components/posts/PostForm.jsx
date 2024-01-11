@@ -13,12 +13,12 @@ const PostForm = ({
     console.log(title);
     return (
         <section className="mt-8">
-            <h2 className="font-bold uppercase text-center md:text-lg lg:text-xl">Add a New Post</h2>
-            <div className="w-11/12 mx-auto my-4">
+            <h2 className="font-bold font-serif text-center text-2xl md:text-2xl lg:text-4xl ">Add a New Post</h2>
+            <div className="w-11/12 mx-auto p-4 my-9">
                 <form
                     className="flex flex-col lg:grid grid-cols-[85px_200px_100px]  justify-center items-start w-11/12 mx-auto ">
                     {/*Título del post*/}
-                    <label className="font-semibold" htmlFor="postTitle">Post Title: </label>
+                    <label className="font-customFont" htmlFor="postTitle">Post Title: </label>
                     <input
                         className="w-full col-span-2 border-2 rounded border-indigo-400 mb-4"
                         type="text"
@@ -28,7 +28,7 @@ const PostForm = ({
                         onChange={onTitleChanged()}
                     />
                     {/*Autor del post*/}
-                    <label className="font-semibold" htmlFor="Author">Author: </label>
+                    <label className="font-customFont" htmlFor="Author">Author: </label>
                     <select
                         className="w-full col-span-2 border-2 rounded border-indigo-500 mb-4"
                         type="text"
@@ -40,7 +40,7 @@ const PostForm = ({
                         <UsersList />
                     </select>
                     {/*Contenido del post*/}
-                    <label className="font-semibold" htmlFor="postContent">Content: </label>
+                    <label className="font-customFont" htmlFor="postContent">Content: </label>
                     <textarea
                         className="col-span-2 border-2 rounded border-indigo-500 mb-4 w-full h-24"
                         type="text"
@@ -50,7 +50,7 @@ const PostForm = ({
                         onChange={onContentChanged()}
                     />
                     <button
-                        className={!canSave ? "bg-red-200 p-2 rounded-md uppercase font-semibold w-full col-start-2 " : "bg-green-100 p-2 rounded-md uppercase font-semibold w-full col-start-2"} 
+                        className={!canSave ? "bg-red-200 hover:bg-red-300 p-2 rounded-md font-customFont uppercase font-semibold w-full col-start-2 " : "bg-green-100 hover:bg-green-200 p-2 rounded-md uppercase font-customFont font-semibold w-full col-start-2"} 
                         onClick={onSavePostClicked}
                         type="button"
                         disabled={!canSave}
